@@ -19,7 +19,7 @@ export default function Contact() {
         </span>
       </div>
 
-      <h2 className="t-display-lg uppercase max-w-[16ch]">Short prompt line placeholder</h2>
+      <h2 className="t-display-lg uppercase max-w-[16ch]">Open to opportunities</h2>
 
       <div className="flex flex-wrap items-center gap-[12px]">
         <Button size="lg" variant="secondary" href="mailto:eme.manninen@gmail.com">
