@@ -1,7 +1,6 @@
-// Ported from the "about" section of Developer Portfolio.dc.html. The bio line is still the
-// design file's placeholder. The skill tags below are NOT placeholders — they're pulled straight
-// from your stated stack (CLAUDE.md "Coding preferences"): comfortable-with -> Core skills,
-// newer/basic -> Also exploring. Flag if you want this split adjusted.
+// Ported from the "about" section of Developer Portfolio.dc.html. The skill tags below are
+// pulled from your stated stack (CLAUDE.md "Coding preferences"): comfortable-with -> Core
+// skills, newer/basic -> Also exploring. Flag if you want this split adjusted.
 const coreSkills = [
   "JavaScript / TypeScript",
   "React",
@@ -25,9 +24,10 @@ export default function About() {
 
       <div className="flex flex-col gap-[48px] max-w-[760px]">
         <p className="t-subhead text-[var(--ink)]" style={{ textWrap: "pretty" }}>
-          Bio placeholder. Two or three sentences about how you got into building software,
-          what you have shipped so far, and the kind of team you want to join next. Keep it
-          concrete — the stack, the problem, the outcome.
+          Self-taught developer, about a year in. I learn by building — most of what&apos;s
+          here started as &quot;can I make this work&quot; rather than a course exercise.
+          Currently focused on backend and API work, but comfortable moving across the stack
+          when a project calls for it.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-[30px]">

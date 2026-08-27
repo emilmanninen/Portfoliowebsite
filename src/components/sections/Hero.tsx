@@ -26,7 +26,7 @@ export default function Hero() {
             textWrap: "balance",
           }}
         >
-          Building things that work.
+          Shipping things that work.
         </h1>
 
         <p className="t-body-lg text-[var(--ink-muted)] max-w-[46ch]">
