@@ -1,0 +1,12 @@
+/* Motion — short, flat easing. Press = scale shrink, hover = surface lift or opacity. Ported from the handoff.
+   These are component-level micro-interaction tokens (button press/hover), not the page-level scroll
+   animations CLAUDE.md defers to a later step — kept because they're part of component fidelity. */
+:root {
+  --ease-standard: cubic-bezier(0.44, 0, 0.56, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 400ms;
+  --press-scale: 0.97;
+  --hover-opacity: 0.85;
+}

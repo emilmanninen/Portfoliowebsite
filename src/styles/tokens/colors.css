@@ -1,0 +1,48 @@
+/* Colors — dark-canvas system. Two anchor surfaces (canvas + white), one signal blue, four gradient spotlight grounds.
+   Ported verbatim from the Claude Design handoff (emil-manninen-design-system / tokens/colors.css). */
+:root {
+  /* Brand & accent */
+  --primary: #ffffff;
+  --on-primary: #000000;
+  --accent-blue: #0099ff;
+
+  /* Surfaces */
+  --canvas: #090909;
+  --surface-1: #141414;
+  --surface-2: #1c1c1c;
+  --hairline: #262626;
+  --hairline-soft: #1a1a1a;
+  --inverse-canvas: #ffffff;
+  --inverse-ink: #000000;
+
+  /* Text */
+  --ink: #ffffff;
+  --ink-muted: #999999;
+
+  /* Semantic */
+  --semantic-success: #22c55e;
+
+  /* Gradient spotlight anchors */
+  --gradient-magenta: #d44df0;
+  --gradient-violet: #6a4cf5;
+  --gradient-orange: #ff7a3d;
+  --gradient-coral: #ff5577;
+
+  /* Signature spotlight gradients (anchors, not exact production stops) */
+  --spotlight-violet: radial-gradient(120% 120% at 20% 10%, #8e6bff 0%, #6a4cf5 45%, #2b1a8c 100%);
+  --spotlight-magenta: radial-gradient(120% 120% at 80% 0%, #f47ae8 0%, #d44df0 45%, #6a1f9e 100%);
+  --spotlight-orange: radial-gradient(120% 120% at 15% 90%, #ffc46b 0%, #ff7a3d 45%, #b32f4a 100%);
+  --spotlight-coral: radial-gradient(120% 120% at 70% 100%, #ff9db3 0%, #ff5577 45%, #7d1f52 100%);
+
+  /* Semantic aliases */
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-muted);
+  --text-on-light: var(--inverse-ink);
+  --text-link: var(--accent-blue);
+  --surface-page: var(--canvas);
+  --surface-card: var(--surface-1);
+  --surface-card-raised: var(--surface-2);
+  --border-default: var(--hairline);
+  --border-subtle: var(--hairline-soft);
+  --focus-ring: rgba(0, 153, 255, 0.15);
+}

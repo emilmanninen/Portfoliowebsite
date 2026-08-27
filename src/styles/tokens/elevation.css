@@ -1,0 +1,8 @@
+/* Elevation — four levels. Depth on dark comes from surface lift, not shadow blur. Ported from the handoff. */
+:root {
+  --elev-0: none;
+  --elev-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --elev-2: inset 0 0.5px 0 rgba(255, 255, 255, 0.1), 0 10px 30px rgba(0, 0, 0, 0.25);
+  --elev-3: 0 0 0 1px var(--focus-ring);
+  --elev-active-outline: 0 0 0 2px #050505;
+}

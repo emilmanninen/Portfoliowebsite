@@ -1,0 +1,20 @@
+/* Spacing — 5px base unit (5/10/15/20/30), not a 4/8 grid. Ported from the Claude Design handoff. */
+:root {
+  --space-hair: 1px;
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 15px;
+  --space-lg: 20px;
+  --space-xl: 30px;
+  --space-xxl: 40px;
+  --space-section: 96px;
+
+  --container-max: 1199px;
+  --gutter-desktop: 30px;
+  --gutter-mobile: 20px;
+
+  --bp-desktop: 1199px;
+  --bp-tablet: 810px;
+  --bp-mobile: 809px;
+}

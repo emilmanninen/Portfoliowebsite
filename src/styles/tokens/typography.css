@@ -1,0 +1,111 @@
+/* Typography — Figtree (display substitute for GT Walsheim Medium) + Inter Variable (body) + JetBrains Mono.
+   Ported from the Claude Design handoff (tokens/typography.css). Font FILES are loaded via next/font/google
+   in layout.tsx instead of the handoff's Google Fonts @import — next/font self-hosts them at build time,
+   which avoids the CDN round trip and the layout shift a render-blocking @import causes. The variable names
+   below (--font-figtree / --font-inter / --font-jetbrains-mono) are the CSS custom properties next/font
+   attaches to <html>; --font-display/--font-body/--font-mono just alias them, so every component below is
+   unchanged from the source system. */
+:root {
+  --font-display: var(--font-figtree), "GT Walsheim Medium", system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  /* Inter's brand voice depends on these character variants */
+  --font-features-body: "cv01", "cv05", "cv09", "cv11", "ss03", "ss07", "dlig";
+  --font-features-tabular: "cv01", "cv05", "cv09", "cv11", "tnum";
+
+  /* display-xxl */
+  --type-display-xxl-size: 110px;
+  --type-display-xxl-weight: 500;
+  --type-display-xxl-lh: 0.85;
+  --type-display-xxl-ls: -5.5px;
+  /* display-xl */
+  --type-display-xl-size: 85px;
+  --type-display-xl-weight: 500;
+  --type-display-xl-lh: 0.95;
+  --type-display-xl-ls: -4.25px;
+  /* display-lg */
+  --type-display-lg-size: 62px;
+  --type-display-lg-weight: 500;
+  --type-display-lg-lh: 1;
+  --type-display-lg-ls: -3.1px;
+  /* display-md */
+  --type-display-md-size: 32px;
+  --type-display-md-weight: 500;
+  --type-display-md-lh: 1.13;
+  --type-display-md-ls: -1px;
+  /* headline */
+  --type-headline-size: 22px;
+  --type-headline-weight: 700;
+  --type-headline-lh: 1.2;
+  --type-headline-ls: -0.8px;
+  /* subhead */
+  --type-subhead-size: 24px;
+  --type-subhead-weight: 400;
+  --type-subhead-lh: 1.3;
+  --type-subhead-ls: -0.01px;
+  /* body-lg */
+  --type-body-lg-size: 18px;
+  --type-body-lg-weight: 400;
+  --type-body-lg-lh: 1.3;
+  --type-body-lg-ls: -0.18px;
+  /* body */
+  --type-body-size: 15px;
+  --type-body-weight: 400;
+  --type-body-lh: 1.3;
+  --type-body-ls: -0.15px;
+  /* body-sm */
+  --type-body-sm-size: 14px;
+  --type-body-sm-weight: 500;
+  --type-body-sm-lh: 1.4;
+  --type-body-sm-ls: -0.14px;
+  /* caption */
+  --type-caption-size: 13px;
+  --type-caption-weight: 500;
+  --type-caption-lh: 1.2;
+  --type-caption-ls: -0.13px;
+  /* micro */
+  --type-micro-size: 12px;
+  --type-micro-weight: 400;
+  --type-micro-lh: 1.2;
+  --type-micro-ls: -0.12px;
+  /* button */
+  --type-button-size: 14px;
+  --type-button-weight: 500;
+  --type-button-lh: 1;
+  --type-button-ls: -0.14px;
+}
+
+/* Ready-made type classes — every one is a token composite, never a new value. */
+.t-display-xxl,
+.t-display-xl,
+.t-display-lg,
+.t-display-md {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0;
+}
+.t-display-xxl { font-size: var(--type-display-xxl-size); font-weight: var(--type-display-xxl-weight); line-height: var(--type-display-xxl-lh); letter-spacing: var(--type-display-xxl-ls); }
+.t-display-xl { font-size: var(--type-display-xl-size); font-weight: var(--type-display-xl-weight); line-height: var(--type-display-xl-lh); letter-spacing: var(--type-display-xl-ls); }
+.t-display-lg { font-size: var(--type-display-lg-size); font-weight: var(--type-display-lg-weight); line-height: var(--type-display-lg-lh); letter-spacing: var(--type-display-lg-ls); }
+.t-display-md { font-size: var(--type-display-md-size); font-weight: var(--type-display-md-weight); line-height: var(--type-display-md-lh); letter-spacing: var(--type-display-md-ls); }
+
+.t-headline,
+.t-subhead,
+.t-body-lg,
+.t-body,
+.t-body-sm,
+.t-caption,
+.t-micro {
+  font-family: var(--font-body);
+  font-feature-settings: var(--font-features-body);
+  margin: 0;
+}
+.t-headline { font-size: var(--type-headline-size); font-weight: var(--type-headline-weight); line-height: var(--type-headline-lh); letter-spacing: var(--type-headline-ls); color: var(--ink); }
+.t-subhead { font-size: var(--type-subhead-size); font-weight: var(--type-subhead-weight); line-height: var(--type-subhead-lh); letter-spacing: var(--type-subhead-ls); }
+.t-body-lg { font-size: var(--type-body-lg-size); font-weight: var(--type-body-lg-weight); line-height: var(--type-body-lg-lh); letter-spacing: var(--type-body-lg-ls); }
+.t-body { font-size: var(--type-body-size); font-weight: var(--type-body-weight); line-height: var(--type-body-lh); letter-spacing: var(--type-body-ls); }
+.t-body-sm { font-size: var(--type-body-sm-size); font-weight: var(--type-body-sm-weight); line-height: var(--type-body-sm-lh); letter-spacing: var(--type-body-sm-ls); }
+.t-caption { font-size: var(--type-caption-size); font-weight: var(--type-caption-weight); line-height: var(--type-caption-lh); letter-spacing: var(--type-caption-ls); }
+.t-micro { font-size: var(--type-micro-size); font-weight: var(--type-micro-weight); line-height: var(--type-micro-lh); letter-spacing: var(--type-micro-ls); }
+.t-mono { font-family: var(--font-mono); font-size: var(--type-caption-size); letter-spacing: 0; }

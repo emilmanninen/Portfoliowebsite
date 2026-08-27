@@ -1,0 +1,62 @@
+import Button from "@/components/ui/Button";
+import { projects } from "@/data/projects";
+
+// Ported from the "projects" section of Developer Portfolio.dc.html. The source file hard-coded
+// three near-identical <article> blocks; here they're generated from src/data/projects.ts so the
+// markup only needs to be right once. Card hover (lift + shadow swap) is CSS group-hover instead
+// of the source's style-hover attribute + JS state, same visual result, zero client JS.
+export default function Projects() {
+  return (
+    <section
+      id="projects"
+      className="py-[96px] border-t border-[var(--hairline-soft)] flex flex-col gap-[40px]"
+    >
+      <div className="flex flex-wrap items-end justify-between gap-[30px]">
+        <h2 className="t-display-lg uppercase">Selected work</h2>
+        <p className="t-body text-[var(--ink-muted)] max-w-[34ch]">
+          One-line placeholder framing the three projects below.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+        {projects.map((project) => (
+          <article
+            key={project.name}
+            className="group bg-[var(--surface-1)] rounded-[var(--radius-xl)] p-[20px] flex flex-col gap-[20px] shadow-[var(--elev-1)] transition-[transform,box-shadow,background-color] duration-[var(--dur-base)] ease-[var(--ease-standard)] hover:-translate-y-[2px] hover:shadow-[var(--elev-2)] hover:bg-[var(--surface-2)]"
+          >
+            <div className="aspect-[16/10] rounded-[var(--radius-md)] bg-[var(--surface-2)] flex items-center justify-center">
+              <span className="t-caption text-[var(--ink-muted)]">Screenshot placeholder</span>
+            </div>
+
+            <div className="flex flex-col gap-[8px]">
+              <h3 className="t-headline">{project.name}</h3>
+              <p className="t-body text-[var(--ink-muted)]">{project.blurb}</p>
+            </div>
+
+            <div className="flex flex-wrap gap-[6px]">
+              {project.tags.map((tag, i) => (
+                <span
+                  key={`${project.name}-${tag}-${i}`}
+                  className="t-micro px-[10px] py-[5px] rounded-[var(--radius-pill)] bg-[var(--canvas)] text-[var(--ink-muted)]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex gap-[8px] mt-auto">
+              <Button size="sm" variant="secondary" href={project.githubHref}>
+                GitHub
+              </Button>
+              {project.liveHref && (
+                <Button size="sm" variant="text" href={project.liveHref}>
+                  Live demo
+                </Button>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}

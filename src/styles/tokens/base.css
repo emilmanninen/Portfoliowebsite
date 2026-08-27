@@ -1,0 +1,22 @@
+/* Base — the canvas is the default. There is no light mode. Ported from the Claude Design handoff. */
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-lh);
+  letter-spacing: var(--type-body-ls);
+  font-feature-settings: var(--font-features-body);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+a { color: var(--accent-blue); text-decoration: none; }
+a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+::selection { background: var(--accent-blue); color: var(--inverse-ink); }
+:focus-visible { outline: none; box-shadow: var(--elev-3); }
+section[id] { scroll-margin-top: 72px; }

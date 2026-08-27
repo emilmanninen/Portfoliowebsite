@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Design tokens, ported from the Claude Design handoff (emil-manninen-design-system).
+   See src/styles/tokens/ — colors/typography/spacing/radius/elevation/motion/base.
+
+   Each import is assigned to a Tailwind cascade layer (theme < base < components < utilities,
+   declared by the `@import "tailwindcss"` above). This matters more than it looks: an import
+   with NO layer() is "unlayered", and per the CSS Cascade Layers spec, unlayered CSS always
+   wins over ANY layered CSS regardless of selector specificity. Left unlayered, base.css's
+   plain `a { color: var(--accent-blue) }` would beat every Tailwind text-color utility
+   (`text-[var(--ink)]`, `text-[var(--ink-muted)]`, ...) on every link in the app, no matter how
+   specific — which is exactly the bug this caused before these were layered. */
+@import "../styles/tokens/colors.css" layer(theme);
+@import "../styles/tokens/spacing.css" layer(theme);
+@import "../styles/tokens/radius.css" layer(theme);
+@import "../styles/tokens/elevation.css" layer(theme);
+@import "../styles/tokens/motion.css" layer(theme);
+@import "../styles/tokens/typography.css" layer(components);
+@import "../styles/tokens/base.css" layer(base);
