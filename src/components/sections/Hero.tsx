@@ -1,7 +1,6 @@
 import Button from "@/components/ui/Button";
 
-// Ported from the "top" section of Developer Portfolio.dc.html. Headline/subline are still the
-// design file's placeholders — real copy is a separate step per CLAUDE.md.
+// Ported from the "top" section of Developer Portfolio.dc.html.
 export default function Hero() {
   return (
     <section
@@ -27,12 +26,12 @@ export default function Hero() {
             textWrap: "balance",
           }}
         >
-          Headline placeholder goes here
+          Building things that work.
         </h1>
 
         <p className="t-body-lg text-[var(--ink-muted)] max-w-[46ch]">
-          Subline placeholder — availability, location, and one line about what you are
-          looking for.
+          Based in Jyväskylä, Finland, available immediately. Looking for a junior developer
+          role — backend-leaning, comfortable across the stack.
         </p>
 
         <div className="flex flex-wrap gap-[12px]">
