@@ -1,6 +1,6 @@
-// Placeholder project copy — names are fixed by CLAUDE.md (exactly these three), but the
-// one-liners, tags, and links below are drafts, not real content. Swap in real descriptions,
-// tech tags, screenshots, and GitHub/demo URLs before treating this section as done.
+// Placeholder project copy — names and GitHub links are real, but the one-liners and tags
+// below are still drafts. Swap in real descriptions, tech tags, and screenshots before
+// treating this section as done.
 export type Project = {
   name: string;
   blurb: string;
@@ -14,18 +14,18 @@ export const projects: Project[] = [
     name: "RAG Chatbot",
     blurb: "One-line placeholder — what problem this project solves and for whom.",
     tags: ["Tag", "Tag", "Tag"],
-    githubHref: "#",
+    githubHref: "https://github.com/emilmanninen/qaragbot",
   },
   {
     name: "LeaguePipeline",
     blurb: "One-line placeholder — what problem LeaguePipeline solves and for whom.",
     tags: ["Tag", "Tag", "Tag"],
-    githubHref: "#",
+    githubHref: "https://github.com/emilmanninen/leaguefrontend",
   },
   {
     name: "ToolShare",
     blurb: "One-line placeholder — what problem ToolShare solves and for whom.",
     tags: ["Tag", "Tag", "Tag"],
-    githubHref: "#",
+    githubHref: "https://github.com/emilmanninen/neighborhoodapp",
   },
 ];

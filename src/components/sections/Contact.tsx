@@ -1,8 +1,8 @@
 import Button from "@/components/ui/Button";
 
 // Ported from the "contact" section of Developer Portfolio.dc.html. Per CLAUDE.md this is
-// mailto + external profile links only — no contact form. Hrefs are placeholders until you
-// give me the real Gmail address, GitHub handle, LinkedIn URL, and a CV file to link.
+// mailto + external profile links only — no contact form. LinkedIn and the CV file are still
+// placeholders.
 export default function Contact() {
   return (
     <section
@@ -25,7 +25,7 @@ export default function Contact() {
         <Button size="lg" variant="secondary" href="mailto:eme.manninen@gmail.com">
           Gmail
         </Button>
-        <Button size="lg" variant="secondary" href="#">
+        <Button size="lg" variant="secondary" href="https://github.com/emilmanninen">
           GitHub
         </Button>
         <Button size="lg" variant="secondary" href="#">
