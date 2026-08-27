@@ -11,12 +11,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "ToolShare",
-    blurb: "One-line placeholder — what problem ToolShare solves and for whom.",
-    tags: ["Tag", "Tag", "Tag"],
-    githubHref: "#",
-  },
-  {
     name: "RAG Chatbot",
     blurb: "One-line placeholder — what problem this project solves and for whom.",
     tags: ["Tag", "Tag", "Tag"],
@@ -25,6 +19,12 @@ export const projects: Project[] = [
   {
     name: "LeaguePipeline",
     blurb: "One-line placeholder — what problem LeaguePipeline solves and for whom.",
+    tags: ["Tag", "Tag", "Tag"],
+    githubHref: "#",
+  },
+  {
+    name: "ToolShare",
+    blurb: "One-line placeholder — what problem ToolShare solves and for whom.",
     tags: ["Tag", "Tag", "Tag"],
     githubHref: "#",
   },
