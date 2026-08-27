@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { projects } from "@/data/projects";
 
@@ -19,13 +20,29 @@ export default function Projects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <article
             key={project.name}
             className="group bg-[var(--surface-1)] rounded-[var(--radius-xl)] p-[20px] flex flex-col gap-[20px] shadow-[var(--elev-1)] transition-[transform,box-shadow,background-color] duration-[var(--dur-base)] ease-[var(--ease-standard)] hover:-translate-y-[2px] hover:shadow-[var(--elev-2)] hover:bg-[var(--surface-2)]"
           >
-            <div className="aspect-[16/10] rounded-[var(--radius-md)] bg-[var(--surface-2)] flex items-center justify-center">
-              <span className="t-caption text-[var(--ink-muted)]">Screenshot placeholder</span>
+            <div className="relative aspect-[16/10] rounded-[var(--radius-md)] bg-[var(--surface-2)] flex items-center justify-center overflow-hidden">
+              {project.image ? (
+                // object-contain, never cover — the design system's rule for real screenshots
+                // is "keep aspect ratio and never crop", so this letterboxes instead of cropping
+                // when the source doesn't match the card's 16:10 box.
+                <Image
+                  src={project.image}
+                  alt={`${project.name} screenshot`}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-contain"
+                  // The first card's image is the one Next flagged as the LCP candidate — priority
+                  // preloads it and skips lazy-loading, instead of the browser discovering it late.
+                  priority={index === 0}
+                />
+              ) : (
+                <span className="t-caption text-[var(--ink-muted)]">Screenshot placeholder</span>
+              )}
             </div>
 
             <div className="flex flex-col gap-[8px]">
