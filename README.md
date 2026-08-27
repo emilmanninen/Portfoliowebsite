@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Developer Portfolio
 
-## Getting Started
+Single-page portfolio site for Emil Manninen — a self-taught fullstack developer (~1 year in) job hunting in Finland. Goal: a recruiter understands who I am, sees real project work, and can contact me in a few seconds of scanning.
 
-First, run the development server:
+The visual design (dark editorial tone, oversized display type, gradient spotlight cards) originated in [Claude Design](https://claude.ai/design) and was implemented here as a Next.js site.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+- [Next.js](https://nextjs.org) (App Router) + TypeScript
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) — Figtree (display), Inter (body), JetBrains Mono, self-hosted at build time
+- Static site: no backend, no database. Contact is mailto + GitHub/LinkedIn links, not a form.
+
+## Project structure
+
+```
+src/
+  app/                 # root layout, global styles, the single page
+  components/
+    ui/                # Button, IconButton — design-system primitives
+    layout/            # TopNav, Footer
+    sections/          # Hero, About, Projects, Contact
+  data/
+    projects.ts        # project card content
+  styles/
+    tokens/            # colors, typography, spacing, radius, elevation, motion
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Design tokens and component boundaries are ported from the Claude Design handoff rather than styled ad hoc, so the site stays consistent if the source design system changes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Getting started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build   # production build
+npm run lint    # eslint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Static structure and layout are in place and responsive behavior has been verified across mobile/tablet/desktop breakpoints. Headline, bio, project descriptions, and some contact links are still placeholder content pending real copy — see `CLAUDE.md` for the working roadmap.
