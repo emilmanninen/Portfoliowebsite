@@ -1,5 +1,5 @@
-// Names, GitHub links, and tags are real. The one-liner blurbs are still placeholders, and
-// ToolShare still needs a screenshot.
+// Names, GitHub links, tags, and blurbs are all real now. Live demo links are still "#"
+// placeholders (only there to test the button layout), and ToolShare still needs a screenshot.
 export type Project = {
   name: string;
   blurb: string;
@@ -13,7 +13,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "RAG Chatbot",
-    blurb: "One-line placeholder — what problem this project solves and for whom.",
+    blurb:
+      "Answers questions about Finnish student financial aid (Kela) with citations back to the source page.",
     tags: ["RAG", "FastAPI", "pgvector"],
     githubHref: "https://github.com/emilmanninen/qaragbot",
     image: "/projects/1280800ragbpt.png",
@@ -21,7 +22,8 @@ export const projects: Project[] = [
   },
   {
     name: "LeaguePipeline",
-    blurb: "One-line placeholder — what problem LeaguePipeline solves and for whom.",
+    blurb:
+      "Ingests raw League of Legends match data from Riot's API and visualizes champion win rate and pick rate trends.",
     tags: ["REST API Integration", "Data Pipeline", "Raw SQL"],
     githubHref: "https://github.com/emilmanninen/leaguefrontend",
     image: "/projects/loldash1280800.png",
@@ -29,7 +31,8 @@ export const projects: Project[] = [
   },
   {
     name: "ToolShare",
-    blurb: "One-line placeholder — what problem ToolShare solves and for whom.",
+    blurb:
+      "A neighborhood marketplace for lending and borrowing tools — list what you have, browse what's available, message neighbors to arrange pickup.",
     tags: ["BaaS", "RLS", "Community App"],
     githubHref: "https://github.com/emilmanninen/neighborhoodapp",
     liveHref: "#", // placeholder — just testing the Live demo button layout
