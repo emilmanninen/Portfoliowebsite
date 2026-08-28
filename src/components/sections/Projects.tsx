@@ -94,7 +94,13 @@ export default function Projects() {
                 GitHub
               </Button>
               {project.liveHref && (
-                <Button size="sm" variant="primary" href={project.liveHref}>
+                <Button
+                  size="sm"
+                  variant="primary"
+                  href={project.liveHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Live demo
                 </Button>
               )}
