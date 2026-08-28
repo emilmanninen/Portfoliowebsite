@@ -15,7 +15,7 @@ export default function Projects() {
       <div className="flex flex-wrap items-end justify-between gap-[30px]">
         <h2 className="t-display-lg uppercase">Selected work</h2>
         <p className="t-body text-[var(--ink-muted)] max-w-[34ch]">
-          One-line placeholder framing the three projects below.
+          A few things I&apos;ve built recently.
         </p>
       </div>
 

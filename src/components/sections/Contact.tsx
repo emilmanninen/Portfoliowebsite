@@ -1,8 +1,7 @@
 import Button from "@/components/ui/Button";
 
 // Ported from the "contact" section of Developer Portfolio.dc.html. Per CLAUDE.md this is
-// mailto + external profile links only — no contact form. LinkedIn and the CV file are still
-// placeholders.
+// mailto + external profile links only — no contact form. The CV file is still a placeholder.
 export default function Contact() {
   return (
     <section
@@ -28,7 +27,7 @@ export default function Contact() {
         <Button size="lg" variant="secondary" href="https://github.com/emilmanninen">
           GitHub
         </Button>
-        <Button size="lg" variant="secondary" href="#">
+        <Button size="lg" variant="secondary" href="https://www.linkedin.com/in/emil-manninen-78680129b/">
           LinkedIn
         </Button>
         <Button size="lg" href="#">
