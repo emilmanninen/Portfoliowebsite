@@ -1,5 +1,4 @@
-// Names, GitHub links, tags, blurbs, and screenshots are all real now. Live demo links are
-// still "#" placeholders — only there to test the button layout.
+// Names, GitHub links, tags, blurbs, screenshots, and live demo links are all real now.
 export type Project = {
   name: string;
   blurb: string;
@@ -18,7 +17,7 @@ export const projects: Project[] = [
     tags: ["RAG", "FastAPI", "pgvector"],
     githubHref: "https://github.com/emilmanninen/qaragbot",
     image: "/projects/1280800ragbpt.png",
-    liveHref: "#", // placeholder — just testing the Live demo button layout
+    liveHref: "https://qaragbot.emilmanninen.com/",
   },
   {
     name: "LeaguePipeline",
@@ -27,7 +26,7 @@ export const projects: Project[] = [
     tags: ["REST API Integration", "Data Pipeline", "Raw SQL"],
     githubHref: "https://github.com/emilmanninen/leaguefrontend",
     image: "/projects/960lol.png",
-    liveHref: "#", // placeholder — just testing the Live demo button layout
+    liveHref: "https://leagueanalytics.emilmanninen.com/",
   },
   {
     name: "ToolShare",
@@ -36,6 +35,6 @@ export const projects: Project[] = [
     tags: ["BaaS", "RLS", "Community App"],
     githubHref: "https://github.com/emilmanninen/neighborhoodapp",
     image: "/projects/960toolshare.png",
-    liveHref: "#", // placeholder — just testing the Live demo button layout
+    liveHref: "https://toolshare.emilmanninen.com/",
   },
 ];
