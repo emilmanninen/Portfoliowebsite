@@ -13,7 +13,7 @@ const navLinks = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[var(--canvas)] font-[family-name:var(--font-body)] text-[var(--ink)]">
+    <div className="min-h-screen overflow-x-hidden bg-[var(--canvas)] font-[family-name:var(--font-body)] text-[var(--ink)]">
       <TopNav
         brand="Emil Manninen"
         links={navLinks}
