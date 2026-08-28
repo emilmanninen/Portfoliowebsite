@@ -60,7 +60,12 @@ export default function Hero() {
           <Button size="lg" href="#projects">
             View projects
           </Button>
-          <Button size="lg" variant="secondary" href="#contact">
+          <Button
+            size="lg"
+            variant="secondary"
+            href="/emil-manninen-cv.pdf"
+            download="Emil Manninen - CV.pdf"
+          >
             Download CV
           </Button>
         </div>

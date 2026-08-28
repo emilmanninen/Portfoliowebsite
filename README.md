@@ -55,4 +55,4 @@ npm run test:watch  # vitest, watch mode
 
 ## Status
 
-Layout is static and responsive across mobile/tablet/desktop. Copy (headline, bio, project descriptions), project screenshots, and all contact/live-demo links are real, not placeholders. The one exception is "Download CV" — it currently scrolls to the Contact section rather than serving an actual file, since the CV itself hasn't been finalized yet.
+Layout is static and responsive across mobile/tablet/desktop. Copy (headline, bio, project descriptions), project screenshots, and all contact/live-demo/CV links are real, not placeholders.
