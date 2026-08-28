@@ -1,5 +1,5 @@
-// Names, GitHub links, tags, and blurbs are all real now. Live demo links are still "#"
-// placeholders (only there to test the button layout), and ToolShare still needs a screenshot.
+// Names, GitHub links, tags, blurbs, and screenshots are all real now. Live demo links are
+// still "#" placeholders — only there to test the button layout.
 export type Project = {
   name: string;
   blurb: string;
@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "Ingests raw League of Legends match data from Riot's API and visualizes champion win rate and pick rate trends.",
     tags: ["REST API Integration", "Data Pipeline", "Raw SQL"],
     githubHref: "https://github.com/emilmanninen/leaguefrontend",
-    image: "/projects/loldash1280800.png",
+    image: "/projects/960lol.png",
     liveHref: "#", // placeholder — just testing the Live demo button layout
   },
   {
@@ -35,6 +35,7 @@ export const projects: Project[] = [
       "A neighborhood marketplace for lending and borrowing tools — list what you have, browse what's available, message neighbors to arrange pickup.",
     tags: ["BaaS", "RLS", "Community App"],
     githubHref: "https://github.com/emilmanninen/neighborhoodapp",
+    image: "/projects/960toolshare.png",
     liveHref: "#", // placeholder — just testing the Live demo button layout
   },
 ];

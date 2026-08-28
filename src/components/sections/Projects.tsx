@@ -47,7 +47,15 @@ export default function Projects() {
 
             <div className="flex flex-col gap-[8px]">
               <h3 className="t-headline">{project.name}</h3>
-              <p className="t-body text-[var(--ink-muted)]">{project.blurb}</p>
+              {/* Fixed to 4 lines (line-clamp caps it, min-h reserves the space even when a
+                  blurb is shorter) so the tags/GitHub row lines up at the same height across
+                  every card regardless of blurb length — otherwise a 2-line blurb next to a
+                  4-line one pushes everything below it out of alignment. 4 lines is what the
+                  longest current blurb (ToolShare's) actually needs at this card width; a much
+                  longer blurb added later would still get clamped, just worth knowing. */}
+              <p className="t-body text-[var(--ink-muted)] line-clamp-4 min-h-[78px]">
+                {project.blurb}
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-[6px]">
