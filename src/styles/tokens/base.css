@@ -2,6 +2,22 @@
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
+  /* w-screen/100vw (the hero glow's full-bleed breakout) is based on the initial containing
+     block width, which does NOT subtract a classic (space-consuming) scrollbar's width — so on
+     any page tall enough to scroll vertically, 100vw ends up a few px wider than the real
+     visible viewport, causing a horizontal scrollbar. Clipping that excess here, on the true
+     root, is the fix — NOT on a nested wrapper div (see page.tsx history): overflow-x-hidden on
+     an arbitrary descendant div turns it into its own scroll container, which breaks
+     position:sticky for anything inside it. html IS the page's normal scroll context already,
+     not a separate nested one, so this doesn't have that problem.
+
+  scrollbar-gutter: stable also matters here: without it, browsers vary in whether they
+  reserve layout space for the vertical scrollbar (classic scrollbars do, overlay ones often
+  don't) — so document.documentElement.clientWidth isn't a reliable, consistent number across
+  browsers/OSes. Forcing it to always reserve that space is what actually keeps content (like
+  the sticky nav) from rendering underneath where the scrollbar sits. */
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 body {
   margin: 0;
