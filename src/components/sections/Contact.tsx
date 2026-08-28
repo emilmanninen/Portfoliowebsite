@@ -1,7 +1,9 @@
 import Button from "@/components/ui/Button";
 
 // Ported from the "contact" section of Developer Portfolio.dc.html. Per CLAUDE.md this is
-// mailto + external profile links only — no contact form. The CV file is still a placeholder.
+// direct links only, no contact form — Gmail opens a pre-addressed compose window instead of
+// a mailto: link (recruiters on a work machine without a configured mail client would otherwise
+// hit a dead "no app to handle this" prompt). The CV file is still a placeholder.
 export default function Contact() {
   return (
     <section
@@ -21,13 +23,31 @@ export default function Contact() {
       <h2 className="t-display-lg uppercase max-w-[16ch]">Open to opportunities</h2>
 
       <div className="flex flex-wrap items-center gap-[12px]">
-        <Button size="lg" variant="secondary" href="mailto:eme.manninen@gmail.com">
+        <Button
+          size="lg"
+          variant="secondary"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=eme.manninen@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Gmail
         </Button>
-        <Button size="lg" variant="secondary" href="https://github.com/emilmanninen">
+        <Button
+          size="lg"
+          variant="secondary"
+          href="https://github.com/emilmanninen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub
         </Button>
-        <Button size="lg" variant="secondary" href="https://www.linkedin.com/in/emil-manninen-78680129b/">
+        <Button
+          size="lg"
+          variant="secondary"
+          href="https://www.linkedin.com/in/emil-manninen-78680129b/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           LinkedIn
         </Button>
         <Button size="lg" href="#">
