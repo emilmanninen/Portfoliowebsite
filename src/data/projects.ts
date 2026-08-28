@@ -17,6 +17,7 @@ export const projects: Project[] = [
     tags: ["RAG", "FastAPI", "pgvector"],
     githubHref: "https://github.com/emilmanninen/qaragbot",
     image: "/projects/1280800ragbpt.png",
+    liveHref: "#", // placeholder — just testing the Live demo button layout
   },
   {
     name: "LeaguePipeline",
@@ -24,11 +25,13 @@ export const projects: Project[] = [
     tags: ["REST API Integration", "Data Pipeline", "Raw SQL"],
     githubHref: "https://github.com/emilmanninen/leaguefrontend",
     image: "/projects/loldash1280800.png",
+    liveHref: "#", // placeholder — just testing the Live demo button layout
   },
   {
     name: "ToolShare",
     blurb: "One-line placeholder — what problem ToolShare solves and for whom.",
     tags: ["BaaS", "RLS", "Community App"],
     githubHref: "https://github.com/emilmanninen/neighborhoodapp",
+    liveHref: "#", // placeholder — just testing the Live demo button layout
   },
 ];

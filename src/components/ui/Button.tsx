@@ -36,8 +36,11 @@ const base =
   "focus-visible:outline-none focus-visible:shadow-[var(--elev-3)]";
 
 const variants: Record<Variant, string> = {
+  // #e6e6e6 (the design system's literal spec value) reads as barely-there against white at rest
+  // — darkened further here so the hover state is actually noticeable, same intent as secondary's
+  // charcoal shift, just a lighter starting point to work with.
   primary:
-    "bg-[var(--primary)] text-[var(--on-primary)] rounded-[var(--radius-pill)] px-[15px] py-[10px] hover:bg-[#e6e6e6]",
+    "bg-[var(--primary)] text-[var(--on-primary)] rounded-[var(--radius-pill)] px-[15px] py-[10px] hover:bg-[#cccccc]",
   secondary:
     "bg-[var(--surface-1)] text-[var(--ink)] rounded-[var(--radius-pill)] px-[15px] py-[10px] hover:bg-[var(--surface-2)]",
   translucent:

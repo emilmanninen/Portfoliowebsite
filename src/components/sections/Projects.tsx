@@ -66,7 +66,7 @@ export default function Projects() {
                 GitHub
               </Button>
               {project.liveHref && (
-                <Button size="sm" variant="text" href={project.liveHref}>
+                <Button size="sm" variant="primary" href={project.liveHref}>
                   Live demo
                 </Button>
               )}
