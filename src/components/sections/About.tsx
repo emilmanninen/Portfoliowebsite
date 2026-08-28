@@ -1,16 +1,18 @@
-// Ported from the "about" section of Developer Portfolio.dc.html. The skill tags below are
-// pulled from your stated stack (CLAUDE.md "Coding preferences"): comfortable-with -> Core
-// skills, newer/basic -> Also exploring. Flag if you want this split adjusted.
+// Ported from the "about" section of Developer Portfolio.dc.html.
 const coreSkills = [
+  "Python",
   "JavaScript / TypeScript",
   "React",
   "Next.js",
   "Node / Express",
   "PostgreSQL",
   "Prisma",
+  "FastAPI",
+  "Docker",
+  "CI/CD",
 ];
 
-const alsoExploring = ["Python", "Java / Spring Boot", "Docker"];
+const alsoExploring = ["Java / Spring Boot"];
 
 export default function About() {
   return (
