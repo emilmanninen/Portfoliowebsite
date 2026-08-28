@@ -39,6 +39,14 @@ Don't add a backend/contact form — mailto + profile links are the deliberate c
 Don't overwrite placeholder content with invented copy — ask first, or clearly mark anything you draft as a suggestion.
 Don't add animation/interaction libraries until the static version is confirmed and I've said to move to that step.
 
+## Working style
+- Work directly on `main`. When asked to make a change, edit the files and stop —
+  do not run `git add`, `git commit`, `git push`, or `gh pr create` on your own.
+- Leave changes uncommitted in the working tree until the user runs `/branch-and-pr`
+  themselves to package and ship them.
+Commit messages use Conventional Commits with a mandatory scope: `type(scope): description`. Types: feat, fix, docs, style, refactor, perf, test, chore, build, ci. Scope names the part of the codebase affected (e.g. `frontend`, `db`, `auth`, `messages`, `ci`). Add an optional body (blank line after the subject) when the change needs context — what and why, not how. Example: `fix(messages): scroll thread to newest message on load`.
+
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
