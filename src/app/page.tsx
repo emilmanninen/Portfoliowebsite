@@ -18,7 +18,11 @@ export default function Home() {
         brand="Emil Manninen"
         links={navLinks}
         secondary={{ label: "Contact", href: "#contact" }}
-        primary={{ label: "Download CV", href: "#contact" }}
+        primary={{
+          label: "Download CV",
+          href: "/emil-manninen-cv.pdf",
+          download: "Emil Manninen - CV.pdf",
+        }}
       />
 
       <main className="max-w-[var(--container-max)] mx-auto px-[30px]">

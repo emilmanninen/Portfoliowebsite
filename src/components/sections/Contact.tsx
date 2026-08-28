@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 // Ported from the "contact" section of Developer Portfolio.dc.html. Per CLAUDE.md this is
 // direct links only, no contact form — Gmail opens a pre-addressed compose window instead of
 // a mailto: link (recruiters on a work machine without a configured mail client would otherwise
-// hit a dead "no app to handle this" prompt). The CV file is still a placeholder.
+// hit a dead "no app to handle this" prompt).
 export default function Contact() {
   return (
     <section
@@ -50,7 +50,7 @@ export default function Contact() {
         >
           LinkedIn
         </Button>
-        <Button size="lg" href="#">
+        <Button size="lg" href="/emil-manninen-cv.pdf" download="Emil Manninen - CV.pdf">
           Download CV
         </Button>
       </div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Button from "@/components/ui/Button";
 import IconButton from "@/components/ui/IconButton";
 
-type NavLink = { label: string; href: string };
+type NavLink = { label: string; href: string; download?: string };
 
 type TopNavProps = {
   brand: string;
@@ -55,7 +55,7 @@ export default function TopNav({ brand, links, primary, secondary }: TopNavProps
             </span>
           )}
           <span className="hidden min-[810px]:inline-flex">
-            <Button size="sm" href={primary.href}>
+            <Button size="sm" href={primary.href} download={primary.download}>
               {primary.label}
             </Button>
           </span>
@@ -96,7 +96,12 @@ export default function TopNav({ brand, links, primary, secondary }: TopNavProps
                 {secondary.label}
               </Button>
             )}
-            <Button size="sm" href={primary.href} onClick={() => setOpen(false)}>
+            <Button
+              size="sm"
+              href={primary.href}
+              download={primary.download}
+              onClick={() => setOpen(false)}
+            >
               {primary.label}
             </Button>
           </div>
