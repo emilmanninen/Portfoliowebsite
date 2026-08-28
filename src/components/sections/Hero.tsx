@@ -7,33 +7,25 @@ export default function Hero() {
       id="top"
       className="relative pt-[120px] pb-[96px] flex flex-wrap gap-[60px] items-end justify-between"
     >
-      {/* Ambient glow, not a card. A radial-gradient with no explicit size defaults to
-          "farthest-corner" sizing: its 100%-radius is the distance from the center point to the
-          box's FARTHEST corner, not its nearest edge. With the center near the top-right of a
-          ~1139x550 section, the right edge is only ~171px away and the bottom edge ~467px away,
-          but the farthest-corner distance (to bottom-left) is ~1075px — so the 70% stop lands
-          at ~752px, far past those close edges. The gradient hits the edge while still solidly
-          colored, long before it's had room to fade. Fix: make the box itself much bigger than
-          the section (w-screen, breaking out of <main>'s max-width entirely; h-[150%]) so the
-          farthest-corner distance grows well past where the fade completes in every direction.
-          left-1/2 -translate-x-1/2 centers a w-screen element on the viewport regardless of the
-          parent's own width/padding — the standard full-bleed-inside-a-constrained-container
-          technique. It only works without an overflow-hidden ancestor narrower than the
-          viewport, though — the section itself used to have overflow-hidden, which clipped this
-          right back down to the section's own (max-w-constrained) box, undoing the breakout
-          entirely. w-screen never exceeds the real viewport width on its own, so dropping that
-          overflow-hidden doesn't reopen the horizontal-scroll risk it was guarding against;
-          see the outer wrapper in page.tsx for that safety net now. #6a4cf5 is --gradient-violet
-          as rgb(); custom properties can't be interpolated into a gradient() function, so the
-          value has to be inlined here. Muted opacity since it's the first color anywhere on an
-          otherwise monochrome site; dimmed further on mobile where there's no empty space
-          beside the text for it to sit in. */}
+      {/* Ambient glow, not a card. Full-bleed breakout: the section itself doesn't set a
+          max-w, it inherits the 1139px content width from <main className="max-w-[var(
+          --container-max)] ...">. left-1/2 w-screen -translate-x-1/2 is the standard trick to
+          escape that regardless — it centers a viewport-width element on the viewport itself,
+          ignoring the parent's own (narrower, off-center-from-viewport) box. top-0 bottom-0
+          keeps the height tied to the section exactly, same as before — only width is breaking
+          out here, per the ask; the text column below keeps its own max-w-[860px] untouched.
+
+          This does NOT fully fix the hard-edge issue by itself — see the follow-up message.
+          farthest-corner sizing is still driven by the section's HEIGHT (742px, unchanged by
+          going full-bleed on width), so the top/bottom edges are still close relative to the
+          farthest-corner radius even in a wider box. Kept as asked; flagging so it's not
+          mistaken for a complete fix. */}
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[150%] w-screen -translate-x-1/2 -translate-y-1/2 max-[809px]:opacity-50"
+        className="pointer-events-none absolute left-1/2 top-0 bottom-0 w-screen -translate-x-1/2 blur-3xl max-[809px]:opacity-50"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 70% 30%, rgba(106,76,245,0.25) 0%, transparent 45%), " +
-            "radial-gradient(circle at 66% 62%, rgba(106,76,245,0.12) 0%, transparent 45%)",
+            "radial-gradient(circle farthest-corner at 78% 30%, rgba(106,76,245,0.25) 0%, transparent 92%), " +
+            "radial-gradient(circle farthest-corner at 65% 78%, rgba(106,76,245,0.12) 0%, transparent 92%)",
         }}
       />
 
