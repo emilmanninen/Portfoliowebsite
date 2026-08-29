@@ -27,9 +27,9 @@ export default function About() {
       <div className="flex flex-col gap-[48px] max-w-[760px]">
         <p className="t-subhead text-[var(--ink)]" style={{ textWrap: "pretty" }}>
           Self-taught developer, about a year in. I learn by building — most of what&apos;s
-          here started as &quot;can I make this work&quot; rather than a course exercise.
-          Currently focused on backend and API work, but comfortable moving across the stack
-          when a project calls for it.
+          here started as <q>can I make this work</q> rather than a course exercise. Currently
+          focused on backend and API work, but comfortable moving across the stack when a
+          project calls for it.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-[30px]">
