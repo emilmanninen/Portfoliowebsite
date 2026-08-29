@@ -17,7 +17,6 @@ export default function Home() {
       <TopNav
         brand="Emil Manninen"
         links={navLinks}
-        secondary={{ label: "Contact", href: "#contact" }}
         primary={{
           label: "Download CV",
           href: "/emil-manninen-cv.pdf",
